@@ -55,6 +55,7 @@ body figure img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 80vw;
   }
   body h1 {
     flex-basis: 100%;
