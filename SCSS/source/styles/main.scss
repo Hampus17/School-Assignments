@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+$title-color: #333333;
+$subtitle-color: #444444;
+
+@mixin x_center() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin y_center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin spinny-boy($transform-deg) {
+  -webkit-transform: rotate($transform-deg);
+  -moz-transform: rotate($transform-deg);
+  transform: rotate($transform-deg);
+}
+
+@keyframes spinny {
+  from {
+    @include spinny-boy(180deg);
+  }
+
+  to {
+    @include spinny-boy(0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  
+  animation-name: spinny;
+  animation-duration: 5s;
+}
+
+.cta--button {
+  background-color: black;
+  outline: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+
+
+  &:hover {
+    background-color: rgb(26, 26, 26);
+    transition: background-color 0.2s;
+  }
+}
+
+.cta--link {
+  position: relative;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  
+  &:after {
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 1px; 
+    content: "";
+    border-bottom: 1px solid rgb(202, 202, 202);
+  }
+
+  &:hover {
+    border-bottom: 1px solid rgb(100, 100, 100);
+  }
+}
+
+.title--lg {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: $title-color;
+  margin: 0 0 1rem 0;
+}
+
+.title--desc {
+  color: #333333;
+  margin: 0 0 1rem 0;
+}
+
+.site--header {
+  background-color: black;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0 5%;
+
+  .logo {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-family: "Poppins";
+  }
+
+  .navbar {
+    @include x_center();
+    flex-basis: 100%;
+
+    .nav--left {
+      display: flex;
+      margin: 0 auto 0 1.4rem;
+    }
+
+    .nav--right {
+      display: flex;
+      margin: 0 0 0 auto;
+    }
+
+    .nav--item {
+      color: white;
+      list-style: none;
+      text-decoration: none;
+      padding: 0.6rem 0.8rem;
+      margin-right: 0.4rem;
+      font-size: 0.9rem;
+      align-self: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+        transition: background-color 0.2s;
+        border-radius: 24px;
+      }
+
+      &.nav--button {
+        background-color: white;
+        color: black;
+        border-radius: 24px;
+        padding: 0.7rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin: 0;
+
+        &:hover {
+          background-color: rgb(223, 223, 223);
+          transition: background-color 0.2s;
+        }
+      }
+
+      &.nav--dropdown {
+        content: "Företag ▾";
+      }
+    }
+  }
+}
+
+.landing--page {
+  background-image: url("https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_1349,h_760/v1578357180/assets/69/908bc0-7167-40d0-b046-af52170801f5/original/Product-Masthead-Desktop_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding: 5% 8% 0 8%;
+
+  .products--list {
+    display: flex;
+    background: white;
+
+    .list__item {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 10rem;
+
+      &:hover {
+        color: rgb(77, 77, 77);
+        cursor: pointer;
+      }
+
+      &.list--active {
+        &:after {
+          display: block;
+          content: "";
+          position: relative;
+          bottom: -15px;
+          left: 13px;
+          background: black;
+          width: 4.5rem;
+          height: 0.3rem;
+        }
+      }
+
+      i {
+        position: relative;
+        flex: 1 0 100%;
+        font-size: 1.4rem;
+        padding: 1rem 0 0 0;
+      }
+
+      .list__item--text {
+        flex: 1 0 100%; 
+        padding: 0.2rem 0;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .product--information {
+    display: block;
+    background-color: white;
+    width: 50%;
+    height: auto;
+    max-height: 65%;
+    border-top: 1px solid rgb(224, 224, 224);
+    padding: 1.8rem 3rem;
+    transition: max-height 0.2s;
+
+    .info--title {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    .info--desc {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.cities {
+  background-image: url("https://www.uber-assets.com/image/upload/v1556927537/assets/e4/ade93c-0b7b-4990-bda4-afef96793277/original/Modalities_banner_home.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding: 5% 60% 0 8%;
+  display: block;
+}
+
+.business {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  padding: 5% 8% 0 8%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 4rem 4rem auto;
+  grid-template-areas: 
+    "title  title  title"
+    "desc   desc  desc"
+    ".   .   .";
+
+  .title--lg {
+    grid-area: title;
+  }
+
+  .title--desc {
+    grid-area: desc;
+  }
+
+  .business__card {
+
+    img {
+      width: 97%;
+    }
+
+    .business__card--title {
+      padding-top: 1rem;
+      font-weight: 500;
+      color: #333333;
+    }
+
+    .business__card--desc {
+      color: #333333;
+    }
+  }
+}
+
+.safety {
+  height: 60vh;
+  width: 100vw;
+  padding: 5% 8% 0 8%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 80%;
+  grid-template-areas: 
+    "left  img";
+  align-items: center;
+
+    .safet--left {
+      grid-area: left;
+    }
+
+
+
+    img {
+      grid-area: img;
+    }
+}
