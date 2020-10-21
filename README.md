@@ -3,4 +3,5 @@
 Collection of assignments
 
 ## 1. Media Queries
-## 2. 
+## 2. SCSS
+## 3. Bootstrap
