@@ -2,6 +2,6 @@
 
 Collection of assignments
 
-## 1. [a link](https://hampus17.github.io/School-Assignments/MediaQueries/)Media Queries
-## 2. [a link](https://hampus17.github.io/School-Assignments/SCSS/)SCSS
-## 3. [a link](https://hampus17.github.io/School-Assignments/Bootstrap/)Bootstrap
+## 1. [Media Queries](https://hampus17.github.io/School-Assignments/MediaQueries/)
+## 2. [SCSS](https://hampus17.github.io/School-Assignments/SCSS/)
+## 3. [Bootstrap](https://hampus17.github.io/School-Assignments/Bootstrap/)
