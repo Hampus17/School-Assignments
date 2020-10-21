@@ -1,4 +1,4 @@
-# Shool-Assignments
+# School-Assignments
 
 Collection of assignments
 
