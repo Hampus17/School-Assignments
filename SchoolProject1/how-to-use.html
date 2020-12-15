@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/tailwind.css">
+    <link rel="stylesheet" href="build/styles.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/puzzle.png" type="image/x-icon">
+    <title>Joober - Tutorial</title>
+</head>
+
+<body>
+    <div id="opacity-overlay" class="hidden fixed top-0 left-0 z-10 w-screen h-screen bg-black bg-opacity-50"></div>
+    <section class="navigation w-screen shadow-lg">
+        <nav id="navbar" class="fixed top-0 border-b border-white border-opacity-25 flex w-screen bg-blue-100 fixed z-20 h-16 text-white shadow-lg text-xl px-6
+            md:">
+            <div id="logo" class="h-full flex items-center">
+                <!-- <img src="assets/logo-1.svg" alt="" class="h-full"> -->
+                <a href="#" class="text-2xl font-bold">Joober</a>
+            </div>
+            <div class="h-full w-full flex items-center lg:hidden">
+                <button id="toggle-nav" class="ml-auto flex items-center px-2 py-2 text-white hover:text-white focus:outline-none">
+                    <svg class="fill-current h-8 w-8" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Hamburger</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <ul id="nav-list"
+            class="fixed top-0 mt-12 z-10 left-0 text-white font-semibold text-xl w-screen p-6 pr-7 lg:flex lg:mt-0 lg:z-30 lg:bg-opacity-0 lg:justify-end lg:p-0 lg:h-16 lg:pr-4 lg:pt-2">
+            <li class="nav-link mb-2 flex items-center justify-end">
+                <a href="index.html">Home</a>
+                <svg class="h-6 mt-1 px-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+            </li>
+            <li id="nav-search" class="nav-link mb-2 flex items-center justify-end md:ml-2">
+                <p>Search</p>
+                <svg class="h-6 mt-1 px-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </li>
+            <li class="nav-link mb-2 flex items-center justify-end md:ml-2">
+                <a href="listings.html">Listings</a>
+                <svg class="h-6 mt-1 px-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </li>
+            <li class="nav-link mb-2 flex items-center justify-end md:ml-2">
+                <a href="how-to-use.html">How To Use</a>
+                <svg class="h-6 mt-1 px-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </li>
+
+            <li class="nav-link mb-2 flex items-center justify-end md:ml-2">
+                <a href="faq.html">FAQ</a>
+                <svg class="h-6 mt-1 px-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </li>
+
+            <li class="nav-link mb-2 flex items-center justify-end md:ml-2">
+                <a href="contact.html">Contact</a>
+                <svg class="h-6 mt-1 px-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </li>
+
+            <div id="nav-search-input" class="fixed w-screen left-0 lg:mt-12 text-white">
+                <svg class="absolute top-0 mt-5 ml-6 w-8 h-8 text-gray-600" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input id="nav-search-field"
+                    class="text-xl placeholder-gray-300 text-white pb-4 pt-5 pl-20 pr-4 rounded w-full border-b-4 focus:outline-none focus:border-white"
+                    type="text" placeholder="Search jobs">
+            </div>
+        </ul>
+
+    </section>
+
+    <div class="pt-24 md:flex flex-row justify-center md:text-left text-center bg-gray-100 p-4">
+        <div class="flex flex-col justify-center h-full items-center relative mt-2 mb-4 md:m-0">
+            <div
+                class="rounded-full w-12 h-12 text-xl bg-gray-400 font-bold flex justify-center items-center relative md:absolute top-0 right-0 shadow-lg mr-2">
+                1</div>
+        </div>
+        <div class="mx-auto md:mx-0 md:ml-5 px-10 flex flex-col justify-center max-w-2xl rounded">
+            <div class="md:text-3xl text-xl font-bold text-gray-900">View or search for jobs (alternatively view individual companies).</div>
+            <div class="mt-4 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque,
+                quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+        </div>
+    </div>
+
+    <div class="md:flex flex-row justify-center md:text-left text-center bg-gray-100 p-4">
+        <div class="flex flex-col justify-center h-full items-center relative mt-2 mb-4 md:m-0">
+            <div
+                class="rounded-full w-12 h-12 text-xl bg-gray-400 font-bold flex justify-center items-center relative md:absolute top-0 right-0 shadow-lg mr-2">
+                2</div>
+        </div>
+        <div class="mx-auto md:mx-0 md:ml-5 px-10 flex flex-col justify-center max-w-2xl rounded">
+            <div class="md:text-3xl text-xl font-bold text-gray-900">See the requirements and read about the position.</div>
+            <div class="mt-4 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque,
+                quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+        </div>
+    </div>
+
+    <div class="md:flex flex-row justify-center md:text-left text-center bg-gray-100 p-4">
+        <div class="flex flex-col justify-center h-full items-center relative mt-2 mb-4 md:m-0">
+            <div
+                class="rounded-full w-12 h-12 text-xl bg-gray-400 font-bold flex justify-center items-center relative md:absolute top-0 right-0 shadow-lg mr-2">
+                3</div>
+        </div>
+        <div class="mx-auto md:mx-0 md:ml-5 px-10 flex flex-col justify-center max-w-2xl rounded">
+            <div class="md:text-3xl text-xl font-bold text-gray-900">Like the job? Simply apply through our website.</div>
+            <div class="mt-4 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque,
+                quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+        </div>
+    </div>    
+
+    <div class="md:flex flex-row justify-center md:text-left text-center bg-gray-100 p-4">
+        <div class="flex flex-col justify-center h-full items-center relative mt-2 mb-4 md:m-0">
+            <div
+                class="rounded-full w-12 h-12 text-xl bg-gray-400 font-bold flex justify-center items-center relative md:absolute top-0 right-0 shadow-lg mr-2">
+                4</div>
+        </div>
+        <div class="mx-auto md:mx-0 md:ml-5 px-10 flex flex-col justify-center max-w-2xl rounded">
+            <div class="md:text-3xl text-xl font-bold text-gray-900">Wait for the response.</div>
+            <div class="mt-4 text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque,
+                quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+        </div>
+    </div>
+
+    <footer class="container mx-auto px-6">
+        <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+            <div class="text-center py-6">
+                <p class="text-sm text-blue-700 font-bold mb-2"> © Copyright 2069 Joober </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

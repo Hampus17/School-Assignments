@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation #navbar {
+  background-color: #3c366b;
+}
+.navigation #nav-list {
+  transform: translateY(-100vh);
+  transition: transform 0.2s ease-in-out;
+  background: #302b58;
+}
+
+.faq-open .arrow-up {
+  display: none;
+}
+.faq-open .arrow-down {
+  display: block;
+}
+.faq-open .faq-desc {
+  display: block;
+}
+
+.faq-closed .arrow-up {
+  display: block;
+}
+.faq-closed .arrow-down {
+  display: none;
+}
+.faq-closed .faq-desc {
+  display: none;
+}
+
+#nav-search-input {
+  transform: translateX(-120vw);
+  transition: transform 0.2s ease-in-out;
+}
+
+#nav-search-field {
+  background-color: #302b58;
+}
+
+#opacity-overlay {
+  transition: all 0.5s ease-in-out;
+}
+
+.hero {
+  background-color: #080710;
+}
+
+button {
+  background-color: #3c366b;
+}
+
+/* SM */
+/* MD */
+/* LG */
+@media (min-width: 1024px) {
+  .navigation #nav-list {
+    transform: translateY(0);
+    background: transparent;
+  }
+  .navigation .nav-link {
+    cursor: pointer;
+  }
+}
+/* XL */
+/* 2XL */
+
+/*# sourceMappingURL=styles.css.map */
