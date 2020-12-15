@@ -4,75 +4,76 @@
     box-sizing: border-box;
 }
 
+body {
+    #opacity-overlay {
+        transition: all 0.5s ease-in-out;
+    }
 
-.navigation {
-    #navbar {
+    .navigation {
+        #navbar {
+            background-color: #3c366b;
+        }
+    
+        #nav-list {
+            transform: translateY(-100vh);
+            transition: transform 0.2s ease-in-out;
+            background: #302b58;
+    
+            #nav-search-input {
+                transform: translateX(-120vw);
+                transition: transform 0.2s ease-in-out;
+            }
+    
+            #nav-search-field,
+            #nav-search-field-body {
+                background-color: #302b58;
+            }
+        }
+    }
+
+    .faq-open {
+        .arrow-up {
+            display: none;
+        }
+    
+        .arrow-down {
+            display: block;
+        }
+    
+        .faq-desc {
+            display: block;
+        }
+    }
+
+    .faq-closed {
+        .arrow-up {
+            display: block;
+        }
+    
+        .arrow-down {
+            display: none;
+        }
+    
+        .faq-desc {
+            display: none;
+        }
+    }
+
+    .hero {
+        background-color: #080710;
+    }
+
+    button {
         background-color: #3c366b;
     }
-
-    #nav-list {
-        transform: translateY(-100vh);
-        transition: transform 0.2s ease-in-out;
-        background: #302b58;
-    }
 }
 
-.faq-open {
-    .arrow-up {
-        display: none;
-    }
-
-    .arrow-down {
-        display: block;
-    }
-
-    .faq-desc {
-        display: block;
-    }
-}
-
-.faq-closed {
-    .arrow-up {
-        display: block;
-    }
-
-    .arrow-down {
-        display: none;
-    }
-
-    .faq-desc {
-        display: none;
-    }
-}
-
-
-#nav-search-input {
-    transform: translateX(-120vw);
-    transition: transform 0.2s ease-in-out;
-}
-
-#nav-search-field {
-    background-color: #302b58;
-}
-
-#opacity-overlay {
-    transition: all 0.5s ease-in-out;
-}
-
-.hero {
-    background-color: #080710;
-}
-
-button {
-    background-color: #3c366b;
-}
 
 /* SM */
 @media (min-width: 640px) {}
 
 /* MD */
 @media (min-width: 768px) {
-
 
 
 }
@@ -91,8 +92,6 @@ button {
     }
 
 }
-
-
 
 /* XL */
 @media (min-width: 1280px) {}
