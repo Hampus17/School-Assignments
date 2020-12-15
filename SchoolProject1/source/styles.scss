@@ -19,16 +19,14 @@
             transition: transform 0.2s ease-in-out;
         }
 
-        #nav-search-field,
-        #nav-search-field-body {
+        #nav-search-field {
             background-color: #302b58;
         }
     }
 }
 
-#opacity-overlay {
-    transition: all 0.5s ease-in-out;
-}
+#opacity-overlay { transition: all 0.5s ease-in-out; }
+#nav-search-field-body { background-color: #302b58; } 
 
 .faq-open {
     .arrow-up {
