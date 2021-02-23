@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
 </head>
 
 <body id="main" class="w-screen h-screen overflow-x-hidden">
+    <a href="#main-content" class="absolute ml-4 mt-20 top-0-5 z-5 bg-white text-black px-2 py-1 rounded-xl">Skip To Main Content</a>
     <div id="opacity-overlay" class="hidden fixed top-0 left-0 z-10 w-screen h-screen bg-black bg-opacity-50"></div>
     <section class="navigation w-screen shadow-lg">
         <nav id="navbar" class="fixed top-0 border-b border-white border-opacity-25 flex w-screen bg-blue-100 fixed z-20 h-16 text-white shadow-lg text-xl px-6
@@ -92,7 +93,7 @@
                 </svg>
                 <input id="nav-search-field"
                     class="text-xl placeholder-gray-300 text-white pb-4 pt-5 pl-20 pr-4 rounded w-full border-b-4 focus:outline-none focus:border-white"
-                    type="text" placeholder="Search jobs">
+                    type="text" aria-label="search" placeholder="Search jobs">
             </li>
         </ul>
 
@@ -445,7 +446,7 @@
         </svg>
     </div>
 
-    <div class="body mx-auto w-3/4 mt-10">
+    <div id="main-content" class="body mx-auto w-3/4 mt-10">
         <div class="relative">
             <svg class="absolute top-0 mt-6 ml-6 w-8 h-8 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24"
                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -455,7 +456,7 @@
             </svg>
             <input
                 class="text-xl placeholder-gray-600 text-gray-800 pb-4 pt-5 pl-20 pr-4 rounded w-full border-b-4 focus:outline-none focus:border-blue-800"
-                type="text" placeholder="Search jobs">
+                type="text" aria-label="search" placeholder="Search jobs">
         </div>
 
         <div class="flex items-center">
@@ -473,7 +474,7 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col flex-grow ml-4">
-                                <div class="text-sm text-gray-500">Jobs</div>
+                                <div class="text-sm text-gray-900">Jobs</div>
                                 <div class="font-bold text-lg">3259</div>
                             </div>
                         </div>
@@ -489,7 +490,7 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col flex-grow ml-4">
-                                <div class="text-sm text-gray-500">Companies</div>
+                                <div class="text-sm text-gray-900">Companies</div>
                                 <div class="font-bold text-lg">230</div>
                             </div>
                         </div>
@@ -506,7 +507,7 @@
                                 </svg>
                             </div>
                             <div class="flex flex-col flex-grow ml-4">
-                                <div class="text-sm text-gray-500">Users</div>
+                                <div class="text-sm text-gray-900">Users</div>
                                 <div class="font-bold text-lg">23,000+</div>
                             </div>
                         </div>
@@ -525,7 +526,7 @@
                 <div class="w-full p-4">
                     <h2 class="text-gray-900 font-bold text-2xl">Frontend Developer</h2>
                     <h3 class="text-gray-700 text-xl">StackOverflow</h3>
-                    <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
+                    <p class="mt-2 text-gray-900 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
                         odit exercitationem fuga id nam quia . . .</p>
                     <button type="submit"
                         class=" bg-indigo text-white font-semibold px-3 py-2 mb-2 mt-8 rounded shadow-md">Read
@@ -539,7 +540,7 @@
                 <div class="w-full p-4">
                     <h2 class="text-gray-900 font-bold text-2xl">Frontend Developer</h2>
                     <h3 class="text-gray-700 text-xl">StackOverflow</h3>
-                    <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
+                    <p class="mt-2 text-gray-900 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
                         odit exercitationem fuga id nam quia . . .</p>
                     <button type="submit"
                         class=" bg-indigo text-white font-semibold px-3 py-2 mb-2 mt-8 rounded shadow-md">Read
@@ -553,7 +554,7 @@
                 <div class="w-full p-4">
                     <h2 class="text-gray-900 font-bold text-2xl">Frontend Developer</h2>
                     <h3 class="text-gray-700 text-xl">StackOverflow</h3>
-                    <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
+                    <p class="mt-2 text-gray-900 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
                         odit exercitationem fuga id nam quia . . .</p>
                     <button type="submit"
                         class=" bg-indigo text-white font-semibold px-3 py-2 mb-2 mt-8 rounded shadow-md">Read
@@ -567,7 +568,7 @@
                 <div class="w-full p-4">
                     <h2 class="text-gray-900 font-bold text-2xl">Frontend Developer</h2>
                     <h3 class="text-gray-700 text-xl">StackOverflow</h3>
-                    <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
+                    <p class="mt-2 text-gray-900 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
                         odit exercitationem fuga id nam quia . . .</p>
                     <button type="submit"
                         class=" bg-indigo text-white font-semibold px-3 py-2 mb-2 mt-8 rounded shadow-md">Read
@@ -581,7 +582,7 @@
                 <div class="w-full p-4">
                     <h2 class="text-gray-900 font-bold text-2xl">Frontend Developer</h2>
                     <h3 class="text-gray-700 text-xl">StackOverflow</h3>
-                    <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
+                    <p class="mt-2 text-gray-900 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
                         odit exercitationem fuga id nam quia . . .</p>
                     <button type="submit"
                         class=" bg-indigo text-white font-semibold px-3 py-2 mb-2 mt-8 rounded shadow-md">Read
@@ -595,7 +596,7 @@
                 <div class="w-full p-4">
                     <h2 class="text-gray-900 font-bold text-2xl">Frontend Developer</h2>
                     <h3 class="text-gray-700 text-xl">StackOverflow</h3>
-                    <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
+                    <p class="mt-2 text-gray-900 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In
                         odit exercitationem fuga id nam quia . . .</p>
                     <button type="submit"
                         class=" bg-indigo text-white font-semibold px-3 py-2 mb-2 mt-8 rounded shadow-md">Read
@@ -614,7 +615,7 @@
             <div class="w-full text-center">
                 <form action="#">
                     <div class="max-w-sm mx-auto p-1 pr-0 flex items-center flex-wrap justify-center ">
-                        <input type="email" placeholder="example@mail.com"
+                        <input type="email" aria-label="email" placeholder="example@mail.com"
                             class="flex-1 rounded shadow p-3 text-grey-dark mr-2 focus:outline-none bg-gray-200">
                         <button type="submit"
                             class="mt-4 md:mt-0 bg-indigo text-white text-base font-semibold p-3 rounded shadow hover:bg-indigo-light">Subscribe</button>
